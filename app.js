@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('keyup', e => {
   const showRegion = document.querySelector('#select__continent span');
-  showRegion.textContent = 'Filter by Region';
+  showRegion.textContent = 'Filtrar por región';
 
   if (e.target.matches('#searchCountry')) {
     const paisB = e.target.value;
