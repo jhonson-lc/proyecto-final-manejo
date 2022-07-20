@@ -165,14 +165,14 @@ const mostrarModal = paisModal => {
 
 const mostrarDescripcion = data => {
   const items = [
-    'Native Name',
-    'Population',
-    'Region',
-    'Sub Region',
+    'Nombre Nativo',
+    'Población',
+    'Región',
+    'Sub Región',
     'Capital',
-    'Top Level Domain',
-    'Currencies',
-    'Languages',
+    'Dominio',
+    'Moneda',
+    'Idiomas',
   ];
   const template__spanModal = document.getElementById(
     'template__spanModal',
