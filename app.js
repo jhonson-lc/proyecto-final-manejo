@@ -1,3 +1,7 @@
+import fecthAPI from './fetch/fecthAPI.js';
+
+let datos = [];
+
 document.addEventListener('click', e => {
   if (e.target.matches('#button__theme')) {
     cambiarTema();
@@ -12,6 +16,15 @@ document.addEventListener('click', e => {
     filtrarRegion(regionElegida);
   }
   e.stopPropagation();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  fecthAPI().then(data => {
+    data.forEach(item => {
+      datos.push(item);
+    });
+    mostrarCards(data);
+  });
 });
 
 document.addEventListener('keyup', e => {
@@ -80,5 +93,39 @@ const cambiarRegion = e => {
 
 const filtrarRegion = region => {
   let data = datos.filter(pais => pais.region === region);
+  mostrarCards(data);
+};
+
+const mostrarCards = data => {
+  const template__countries = document.getElementById(
+    'template__countries',
+  );
+  const fragment = document.createDocumentFragment();
+  const cards__countries = document.querySelector('.cards__countries');
+
+  cards__countries.textContent = '';
+
+  data.forEach(pais => {
+    const clone = template__countries.content.cloneNode(true);
+    clone.querySelector('.card img').setAttribute('src', pais.flags.png);
+    clone.querySelector('.card__des h4').textContent = pais.name.common;
+    clone.querySelector('.card__Pop').textContent = pais.population;
+    clone.querySelector('.card__Reg').textContent = pais.region;
+    clone.querySelector('.card__Cap').textContent = pais.capital;
+
+    fragment.appendChild(clone);
+  });
+
+  cards__countries.appendChild(fragment);
+};
+
+const buscarPais = paisBuscado => {
+  let data = datos.filter(pais => {
+    if (pais.name.common.toLowerCase().indexOf(paisBuscado) === -1) {
+      return;
+    } else {
+      return pais;
+    }
+  });
   mostrarCards(data);
 };
