@@ -24,6 +24,31 @@
       <div id="darktheme"><i class="fas fa-sun theme__icon"></i>CLARO</div>
     </template>
     <main class="container">
+      <section id="container__modal"></section>
+      <template id="template__modal">
+        <section class="modal">
+          <button class="modal__btnback"><i class="fas fa-arrow-left"></i>Volver</button>
+          <article class="modal__pais">
+            <img src="https://flagcdn.com/w320/mt.png" alt="" />
+            <div class="modal__des">
+              <h4>Nombre de pais</h4>
+              <div class="modal__des-p1"></div>
+              <div class="modal__des-p2">
+                <span class="modal__Border">Fronteras: </span>
+                <div class="modal__des-p2-l"></div>
+              </div>
+            </div>
+          </article>
+        </section>
+      </template>
+      <template id="template__bordersModal">
+        <span class="modal_Bor">France</span>
+      </template>
+      <template id="template__spanModal">
+        <div class="modal__des-p1-p">
+          <span class="modal_Character">Población</span><span class="modal__Pop"></span>
+        </div>
+      </template>
       <div class="filters">
         <div class="filters__search">
           <i class="fas fa-search"></i>
@@ -31,24 +56,37 @@
             type="search"
             name="searchCountry"
             id="searchCountry"
-            placeholder="Search for a country..."
+            placeholder="Buscar por el nombre del país"
             autocomplete="off"
           />
         </div>
         <div class="filters__select">
           <div name="pais" id="select__continent">
-            <span class="select__selection"> Filter by Region </span>
+            <span class="select__selection"> Filtrar por región </span>
             <ul class="list__select display__none">
-              <li data-continent="Africa" value="africa">Africa</li>
-              <li data-continent="Americas" value="america">Americas</li>
+              <li data-continent="Africa" value="africa">África</li>
+              <li data-continent="Americas" value="america">América</li>
               <li data-continent="Asia" value="asia">Asia</li>
-              <li data-continent="Europe" value="europa">Europe</li>
-              <li data-continent="Oceania" value="oceania">Oceania</li>
+              <li data-continent="Europe" value="europa">Europa</li>
+              <li data-continent="Oceania" value="oceania">Oceanía</li>
             </ul>
           </div>
           <div class="select_arrow"></div>
         </div>
       </div>
+      <section class="cards__countries"></section>
+      <template id="template__countries">
+        <article class="card">
+          <img src="https://flagcdn.com/w320/mt.png" alt="" />
+          <div class="card__des">
+            <h4>Nombre de país</h4>
+            <span class="card_Cou">Población: <span class="card__Pop card_Din">98767</span></span>
+            <span class="card_Cou">Región: <span class="card__Reg card_Din">europa</span></span>
+            <span class="card_Cou">Capital: <span class="card__Cap card_Din">Berlin</span></span>
+          </div>
+        </article>
+      </template>
+
     </main>
     <script type="module" src="app.js"></script>
   </body>
