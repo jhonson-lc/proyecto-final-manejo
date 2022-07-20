@@ -251,7 +251,7 @@ const mostrarBorders = pais => {
   } else {
     const clone = template__bordersModal.content.cloneNode(true);
     clone.querySelector('.modal_Bor').textContent =
-      'No bordering countries';
+      'No tiene países fronterizos';
     fragment.appendChild(clone);
   }
   container.appendChild(fragment);
