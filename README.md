@@ -1,37 +1,37 @@
-# REST Countries API with color theme
+# Crear una aplicación web para ver los datos de un país usando una API.
 
-## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+## Tabla de contenido
+
+- [Visión general](#visión-general)
+  - [Objetivos](#objetivos)
+  - [Captura de pantalla](#captura-de-pantalla)
   - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
+- [Proceso](#proceso)
+  - [Construido con](#construido-con)
 
-## Overview
+## Visión general
 
-### The challenge
+### Objetivos
 
-Users should be able to:
+Los usuarios deberían ser capaces de:
 
-- See all countries from the API on the homepage
-- Search for a country using an `input` field
-- Filter countries by region
-- Click on a country to see more detailed information on a separate page
-- Toggle the color scheme between light and dark mode
+- Buscar un país mediante un campo input
+- Filtrar países por región
+- Al hacer clic en un país se podrá ver información más detallada en una página separada.
+- Alternar el esquema de color entre el modo claro y oscuro.
 
-### Screenshot
+### Captura de pantalla
 
 ![](./screenshot.png?raw=true)
 
 ### Links
 
-- Live Site URL: [https://restcountries-api.vercel.app/]()
+- Live Site URL: [https://proyecto-final-manejo.vercel.app/](https://proyecto-final-manejo.vercel.app/)
 
-## My process
+## Proceso
 
-### Built with
+### Contruido con
 
 - Semantic HTML5 markup
 - CSS, Flexbox and Grid
