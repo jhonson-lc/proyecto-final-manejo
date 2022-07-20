@@ -229,4 +229,46 @@ body {
     padding: 0.3rem;
     transform: rotate(45deg);
   }
+  .cards__countries {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    grid-auto-rows: 40rem;
+    grid-gap: 5rem;
+    margin-top: 2rem;
+  }
+  
+  .card {
+    background-color: var(--color-elements);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+  }
+  
+  .card__des {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+  
+  .card h4 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  
+  .card_Cou {
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+  }
+  
+  .card_Din {
+    font-weight: 300;
+  }
+  
+  .card img {
+    width: 100%;
+    min-height: 20rem;
+    max-height: 20rem;
+    object-fit: cover;
+  }
   
