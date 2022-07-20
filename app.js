@@ -2,6 +2,30 @@ document.addEventListener('click', e => {
   if (e.target.matches('#button__theme')) {
     cambiarTema();
   }
+  if (e.target.matches('#select__continent')) {
+    mostrarMenu();
+  }
+
+  if (e.target.matches('.list__select li')) {
+    cambiarRegion(e);
+    let regionElegida = e.target.dataset.continent;
+    filtrarRegion(regionElegida);
+  }
+  e.stopPropagation();
+});
+
+document.addEventListener('keyup', e => {
+  const showRegion = document.querySelector('#select__continent span');
+  showRegion.textContent = 'Filter by Region';
+
+  if (e.target.matches('#searchCountry')) {
+    const paisB = e.target.value;
+    if (paisB) {
+      buscarPais(paisB);
+    } else {
+      mostrarCards(datos);
+    }
+  }
 });
 
 const cacheTema =
@@ -42,3 +66,19 @@ const mostrarBtnTheme = id => {
 };
 
 mostrarBtnTheme(cacheTema);
+
+const mostrarMenu = () => {
+  const showMenu = document.querySelector('#select__continent ul');
+  showMenu.classList.toggle('display__none');
+};
+
+const cambiarRegion = e => {
+  const showRegion = document.querySelector('#select__continent span');
+  showRegion.textContent = e.target.textContent;
+  mostrarMenu();
+};
+
+const filtrarRegion = region => {
+  let data = datos.filter(pais => pais.region === region);
+  mostrarCards(data);
+};
