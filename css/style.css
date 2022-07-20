@@ -130,4 +130,103 @@ body {
   #darktheme {
     text-align: start;
   }
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .filters__search {
+    position: relative;
+  }
+  .filters__search i {
+    font-size: 1.5rem;
+    color: var(--color-input);
+    position: absolute;
+    top: 1.2rem;
+    left: 1.5rem;
+  }
+  
+  #searchCountry {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+    font-family: 'Nunito', sans-serif;
+    border: none;
+    outline: none;
+    padding: 1.2rem 1rem 1.2rem 5rem;
+    background-color: var(--color-elements);
+    color: var(--color-text);
+    font-weight: 300;
+    width: 35rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  #searchCountry::-webkit-search-cancel-button {
+    display: none;
+  }
+  
+  #searchCountry::placeholder {
+    color: var(--color-text);
+  }
+  
+  .filters__select {
+    position: relative;
+  }
+  
+  #select__continent {
+    font-family: 'Nunito', sans-serif;
+    border: none;
+    outline: none;
+    color: var(--color-text);
+    font-weight: 300;
+    width: 15rem;
+    font-size: 1.2rem;
+    appearance: none;
+    box-shadow: none;
+    cursor: pointer;
+  }
+  #select__continent span {
+    z-index: -1;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+    position: relative;
+    border-radius: 0.5rem;
+    padding: 1.2rem;
+    background-color: var(--color-elements);
+    display: block;
+    cursor: pointer;
+  }
+  
+  .display__none {
+    display: none;
+  }
+  
+  #select__continent ul {
+    border-radius: 0.5rem;
+    position: absolute;
+    background-color: var(--color-elements);
+    padding: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+  }
+  
+  #select__continent li {
+    list-style: none;
+    margin: 0.5rem 0;
+    cursor: pointer;
+  }
+  
+  .select_arrow {
+    position: absolute;
+    z-index: -1;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border: solid var(--color-text);
+    border-width: 0 0.2rem 0.2rem 0;
+    display: inline-block;
+    padding: 0.3rem;
+    transform: rotate(45deg);
+  }
   
