@@ -68,3 +68,66 @@ body {
     padding: 3rem 5rem;
     position: relative;
   }
+  #button__theme {
+    z-index: 1;
+    cursor: pointer;
+  }
+  
+  #darktheme,
+  #lighttheme {
+    text-align: end;
+    width: 7.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: inline-block;
+    background-color: var(--color-switch-bg);
+    color: var(--color-switch-text);
+    padding: 1rem 0.5rem;
+    border-radius: 25rem;
+    position: relative;
+    z-index: -1;
+  }
+  
+  .theme__icon {
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    padding: 1rem;
+    border-radius: 25rem;
+  }
+  
+  #lighttheme i {
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem;
+    animation: left 0.4s ease-out;
+  }
+  
+  @keyframes left {
+    0% {
+      left: 4.25rem;
+    }
+    100% {
+      left: 0.25rem;
+    }
+  }
+  
+  #darktheme i {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+    animation: right 0.4s ease-out;
+  }
+  
+  @keyframes right {
+    0% {
+      right: 4.25rem;
+    }
+    100% {
+      right: 0.25rem;
+    }
+  }
+  
+  #darktheme {
+    text-align: start;
+  }
+  
