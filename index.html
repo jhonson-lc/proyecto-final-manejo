@@ -23,6 +23,34 @@
       <div id="lighttheme"><i class="fas fa-moon theme__icon"></i>DARK</div>
       <div id="darktheme"><i class="fas fa-sun theme__icon"></i>LIGHT</div>
     </template>
+    <main class="container">
+      <div class="filters">
+        <div class="filters__search">
+          <i class="fas fa-search"></i>
+          <input
+            type="search"
+            name="searchCountry"
+            id="searchCountry"
+            placeholder="Search for a country..."
+            autocomplete="off"
+          />
+        </div>
+        <div class="filters__select">
+          <div name="pais" id="select__continent">
+            <span class="select__selection"> Filter by Region </span>
+            <ul class="list__select display__none">
+              <li data-continent="Africa" value="africa">Africa</li>
+              <li data-continent="Americas" value="america">Americas</li>
+              <li data-continent="Asia" value="asia">Asia</li>
+              <li data-continent="Europe" value="europa">Europe</li>
+              <li data-continent="Oceania" value="oceania">Oceania</li>
+            </ul>
+          </div>
+          <div class="select_arrow"></div>
+        </div>
+      </div>
+    </main>
+
  
     <script type="module" src="app.js"></script>
   </body>
