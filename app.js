@@ -188,28 +188,28 @@ const mostrarDescripcion = data => {
 
     const { population, name, region, subregion, capital, tld } = data;
 
-    if (item === 'Population') {
+    if (item === 'Población') {
       clone.querySelector('.modal__Pop').textContent = population;
     }
-    if (item === 'Native Name') {
+    if (item === 'Nombre Nativo') {
       let i = Object.values(name.nativeName);
       i.forEach(nN => {
         clone.querySelector('.modal__Pop').textContent = nN.common;
       });
     }
-    if (item === 'Region') {
+    if (item === 'Región') {
       clone.querySelector('.modal__Pop').textContent = region;
     }
-    if (item === 'Sub Region') {
+    if (item === 'Sub Región') {
       clone.querySelector('.modal__Pop').textContent = subregion;
     }
     if (item === 'Capital') {
       clone.querySelector('.modal__Pop').textContent = capital;
     }
-    if (item === 'Top Level Domain') {
+    if (item === 'Dominio') {
       clone.querySelector('.modal__Pop').textContent = tld;
     }
-    if (item === 'Currencies') {
+    if (item === 'Moneda') {
       let crr = Object.values(data.currencies);
       let namesCurrencies = [];
       crr.forEach(ee => {
@@ -218,7 +218,7 @@ const mostrarDescripcion = data => {
       clone.querySelector('.modal__Pop').textContent =
         namesCurrencies.join(',');
     }
-    if (item === 'Languages') {
+    if (item === 'Idiomas') {
       let lang = Object.values(data.languages);
       let allLanguages = [];
       lang.forEach(ee => {
